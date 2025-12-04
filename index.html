@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Math Quiz — Perfect Score</title>
+<title>Math Signs Quiz</title>
 <style>
   :root{ --bg:#fff; --card:#f6f6f7; --accent:#2065d1; --good:#138000; --bad:#c62828;
          --font-sans:"Calibri","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; }
@@ -28,6 +28,17 @@
 
   @media (max-width:520px){ .problem{font-size:30px} input[type="number"]{width:130px} #celebrate h2{font-size:22px} }
 </style>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#ffffff">
+
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("service-worker.js");
+  });
+}
+</script>
+
 </head>
 <body>
   <div class="app" id="appRoot">
@@ -182,3 +193,4 @@ startOver();
 </script>
 </body>
 </html>
+
