@@ -1,15 +1,22 @@
 {
   "name": "Math Signs Quiz",
-  "short_name": "Quiz",
+  "short_name": "Math Signs Quiz",
   "start_url": "index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
-  "icons": [
-    {
-      "src": "data:image/png;base64,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",
-      "sizes": "192x192",
-      "type": "image/png"
-    }
-  ]
+"icons": [
+  {
+    "src": "icons/icon-192.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  },
+  {
+    "src": "icons/icon-512.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }
+]
+
 }
+
