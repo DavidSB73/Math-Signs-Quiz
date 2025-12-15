@@ -13,7 +13,15 @@
   .card{background:var(--card);border-radius:12px;padding:18px;margin-top:20px;box-shadow:0 1px 4px rgba(0,0,0,0.06);}
   .problem{font-size:40px;font-weight:600;text-align:center;margin:20px 0;}
   .controls{display:flex;gap:10px;justify-content:center;align-items:center;}
-  input[type="number"]{font-size:22px;padding:8px;border-radius:8px;border:1px solid #ccc;width:160px;text-align:center;}
+  #answerInput{
+  font-size:22px;
+  padding:8px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  width:160px;
+  text-align:center;
+}
+
   button{font-size:16px;padding:10px 16px;border:0;border-radius:8px;cursor:pointer;background:var(--accent);color:white;}
   button.hidden{display:none;}
   .result{text-align:center;font-size:18px;min-height:28px;margin-top:8px;}
@@ -26,7 +34,12 @@
   #celebrate h2{color:#fff;margin:12px 0 6px;font-size:28px;font-weight:700;text-align:center;}
   #celebrate img{max-height:calc(50vh - 64px);width:auto;display:block;object-fit:contain;}
 
-  @media (max-width:520px){ .problem{font-size:30px} input[type="number"]{width:130px} #celebrate h2{font-size:22px} }
+  @media (max-width:520px){
+    .problem{font-size:30px}
+    #answerInput{width:130px}
+    #celebrate h2{font-size:22px}
+  }
+
 </style>
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#ffffff">
@@ -48,7 +61,16 @@ if ("serviceWorker" in navigator) {
       <div class="problem" id="problemText">—</div>
 
       <div class="controls">
-        <input id="answerInput" type="number" inputmode="numeric" autocomplete="off" placeholder="Answer" />
+         <input
+          id="answerInput"
+          type="text"
+          inputmode="decimal"
+          autocomplete="off"
+          autocorrect="off"
+          autocapitalize="off"
+          spellcheck="false"
+          placeholder="Answer"
+          />
         <button id="submitBtn">Submit</button>
       </div>
 
@@ -193,4 +215,5 @@ startOver();
 </script>
 </body>
 </html>
+
 
